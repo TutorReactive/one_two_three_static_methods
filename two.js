@@ -1,7 +1,7 @@
 var Person = require("./one")
 
 class Student extends Person {
-  constructor(name, age, gender, Parent, favGames, schoo, numFriends) {
+  constructor(name, age, gender, Parent, favGames, school, numFriends) {
     super(name, age, gender, Parent, favGames);
     this.school = school;
     this.numFriends = numFriends;
@@ -13,6 +13,12 @@ class Student extends Person {
 
   getNumFriends() {
     console.log(this.numFriends);
+  }
+
+  static doAllMethods(person) {
+    super.doAllMethods(person);
+    person.getSchool();
+    person.getNumFriends();
   }
 }
 

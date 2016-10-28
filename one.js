@@ -30,6 +30,15 @@ class Person {
   greeting() {
     console.log("Greetings!");
   }
+
+  static doAllMethods(person) {
+    person.getName();
+    person.getAge();
+    person.getGender();
+    person.getParent();
+    person.getFavGames();
+    person.greeting();
+  }
 }
 
 module.exports = Person;
